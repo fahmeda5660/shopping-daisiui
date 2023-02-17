@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-3xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="text-xl input input-bordered" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-20 rounded-full">
+                    <img src="https://picsum.photos/200/300" />
+                    <!-- <img src="https://picsum.photos/500/300?random=2" /> -->
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </header>
+    <section class="px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            <div class="lg:col-span-2">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+                    <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="img/coffee.jpg" alt="Shoes" class="h-[300px] rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 id="first-name" class="card-title">Coffee!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <p>Price: $<span id="first-price">100</span></p>
+                          <p>Quantity: <span id="first-quantity">3</span></p>
+                          <div class="card-actions">
+                            <button id="first-card-btn" class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="img/heart_js.jpg" alt="Shoes" class="h-[300px] rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 id="second-name" class="card-title">Heart!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <p>Price: $<span id="second-price">100</span></p>
+                          <p>Quantity: <span id="second-quantity">3</span></p>
+                          <div class="card-actions">
+                            <button id="second-card-btn" class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="img/panda.png" alt="Shoes" class="h-[300px] rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 id="third-name" class="card-title">Panda!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <p>Price: $<span id="third-price">100</span></p>
+                          <p>Quantity: <span id="third-quantity">3</span></p>
+                          <div class="card-actions">
+                            <button id="third-card-btn" class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="img/vue-js.jpg" alt="Shoes" class="h-[300px] rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 id="fourth-name" class="card-title">Vue!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <p>Price: $<span id="fourth-price">100</span></p>
+                          <p>Quantity: <span id="fourth-quantity">3</span></p>
+                          <div class="card-actions">
+                            <button id="fourth-card-btn" class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card w-96 bg-base-100 shadow-xl">
+                        <figure class="px-10 pt-10">
+                          <img src="img/umbrella.png" alt="Shoes" class="h-[300px] rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                          <h2 id="fifth-name" class="card-title">umbrella!</h2>
+                          <p>If a dog chews shoes whose shoes does he choose?</p>
+                          <input type="number" name="" class="input input-bordered input-sm w-full max-w-xs" id="fifth-price" placeholder="Price">
+                          <input type="number" name="" class="input input-bordered input-sm w-full max-w-xs" id="fifth-quantity" placeholder="Quantity">
+                          <div class="card-actions">
+                            <button id="fifth-card-btn" class="btn btn-primary">Buy Now</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="lg:col-span-1">
+                <h2 class="text-2xl text-center mb-4">Total Quantity:<span id="total-product">0</span></h2>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tableContainer">
+                        <!-- row 1 -->
+                        <!-- <tr>
+                          <th>1</th>
+                          <td>Cy Ganderton</td>
+                          <td>Quality Control Specialist</td>
+                          <td>Blue</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
